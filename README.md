@@ -33,11 +33,21 @@ After calling the program, there will be a list of which parameters were used.
 
 `0` This is the default implementation of the tricorn function. It uses no particular opimization.
 
-`1` This version is an improvement over the default version and uses a principle called area-deletion. Some complex numbers that are for sure part of the tricorn set aren't calculated. This can be useful for calls with a high number of iterations. However, for calls with more measurement points and fewer iterations, this could not be beneficial.
+---
 
-`2` This version is a further developed implementation of version 1. Even more complex numbers that are for sure part of the tricorn set aren't calculated. This can be useful for calls with a high number of iterations. However, for calls with more measurement points and fewer iterations, this could not be beneficial.
+![deletion1](https://user-images.githubusercontent.com/83243533/236501011-76e83f07-2aff-41d3-b229-84a9470f9d4f.PNG)
+`1` This version is an improvement over the default version and uses a principle called area-deletion. Some complex numbers that are for sure part of the tricorn set aren't calculated. This can be useful for calls with a high number of iterations. However, for calls with more measurement points and fewer iterations, this could not be beneficial. The red circles mark the deleted areas.
+
+---
+
+![deletion2](https://user-images.githubusercontent.com/83243533/236501166-1c32e4a8-7fad-45e7-9faf-946f6754e13a.PNG)
+`2` This version is a further developed implementation of version 1. Even more complex numbers that are for sure part of the tricorn set aren't calculated. This can be useful for calls with a high number of iterations. However, for calls with more measurement points and fewer iterations, this could not be beneficial. The red circles mark the deleted areas.
+
+---
 
 `3` This version is similar to the default one. However, it uses SSE intrinsics to implement a SIMD variant of the default implementation.
+
+---
 
 `4` This version is a mixture of the SIMD variant and the area-deletion version.
             
@@ -47,11 +57,17 @@ After calling the program, there will be a list of which parameters were used.
 ![color0](https://user-images.githubusercontent.com/83243533/236499400-ef37317c-78be-4630-933a-9f200eb5b92d.jpg)
 `0` The first coloration scheme is in different blue-variations. The pixel is white if the correlating number is part of the tricorn set. The fewer iterations needed to calculate that the number is not limited, the darker the coloration.
 
+---
+
 ![color1](https://user-images.githubusercontent.com/83243533/236499553-c3f0fa0e-f88f-4583-9fac-696a8e36fb2f.jpg)
 `1` This scheme helps to distinguish the different areas better in comparison to the first-/blue-scheme.
 
+---
+
 ![color2](https://user-images.githubusercontent.com/83243533/236499622-559cce05-25ef-423e-8e1f-5d4932cde8d9.jpg)
 `2` This scheme is inverted. The points that are part of the tricorn set are colored black. The fewer iterations needed to escape, the lighter the color is.
+
+---
 
 ![color3](https://user-images.githubusercontent.com/83243533/236499678-a553a1c2-fd2d-4b30-9ddc-0e7d3d2ea6e1.jpg)
 `3` This scheme is a two-colored variant. It helps to distinguish which point is part  of the tricorn set and which is not. Points that are part of it are colored white, and ones that are not are colored black.
